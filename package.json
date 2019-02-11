@@ -1,0 +1,31 @@
+{
+  "name": "apiexpressmongoecommerce",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "seed": "node ./seeds/seeder.js"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "dotenv": "^6.2.0",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "jsonwebtoken": "^8.4.0",
+    "morgan": "~1.9.0",
+    "pug": "2.0.0-beta11",
+    "lodash": "latest"
+  },
+  "devDependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "faker": "^4.1.0",
+    "mongoose": "^5.4.3",
+    "multer": "^1.4.1",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "slug": "^0.9.3"
+  }
+}
