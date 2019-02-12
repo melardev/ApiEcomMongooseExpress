@@ -30,14 +30,7 @@ const UserSchema = new mongoose.Schema({
         match: [/\S+@\S+\.\S+/, 'is invalid'],
         index: true
     },
-    username: {
-        type: String,
-        lowercase: true,
-        unique: true,
-        required: [true, "can't be blank"],
-        match: [/^[a-zA-Z0-9]+$/, 'is invalid'],
-        index: true
-    },
+
     roles: [{type: mongoose.Schema.Types.ObjectId, ref: 'Role'}],
     addresses: [{type: mongoose.Schema.Types.ObjectId, ref: 'Address'}],
     comments: [{type: mongoose.Schema.Types.ObjectId, ref: 'Comment'}],
