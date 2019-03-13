@@ -33,7 +33,7 @@ exports.buildWithErrorMessages = (messages) => {
     return response;
 };
 
-function populateResponseWithmessages(response, success, messages) {
+function populateResponseWithMessages(response, success, messages) {
     if (response === null)
         response = {};
 
@@ -45,12 +45,18 @@ function populateResponseWithmessages(response, success, messages) {
         response.full_messages = messages;
     else if (messages instanceof Object)
         response.full_messages = Object.values(messages);
+    else
+        response.full_messages = [];
 
     return response;
 }
 
 exports.buildWithDtoAndMessages = (dto, messages) => {
-    return populateResponseWithmessages(dto, true, messages);
+    return populateResponseWithMessages(dto, true, messages);
+};
+
+exports.buildSuccessWithDto = (dto) => {
+    return populateResponseWithMessages(dto, true);
 };
 
 exports.builSimpleSuccess = () => {

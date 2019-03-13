@@ -24,6 +24,7 @@ function buildDto(product, commentsCount) {
         id: product.id,
         slug: product.slug,
         name: product.name,
+        price: product.price,
         image_urls: product.images ? product.images.map(image => image.filePath) : [],
         created_at: product.createdAt,
         updated_at: product.updatedAt,
